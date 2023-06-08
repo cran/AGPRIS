@@ -49,6 +49,8 @@ This function simulates a space-time stochastic process according to the defined
 library(spacetime)
 library(sp)
 library(spdep)
+
+
 set.seed(123)
 sd = sim_data_fe(dataset=regsamp,N=100,TT=8,
                  spatial = 80,Tau = -0.2,Rho = 0.4,

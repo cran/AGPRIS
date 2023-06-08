@@ -49,7 +49,7 @@ This function estimates a space time linear model using the bayesian INLA. It is
 }
 \examples{
 \donttest{
-library(rgdal)
+library(terra)
 set.seed(123)
 sd = sim_data_fe(dataset=regsamp,N=100,TT=8,spatial = 80,
                  Tau = -0.2,Rho = 0.4, Beta = 2,sdDev = 2,

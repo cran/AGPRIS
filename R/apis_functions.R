@@ -1,3 +1,5 @@
+
+
 includeLag <- function(dataset,VAR,var.agg,lags=1){
  dataset0 <- dataset
  dataset0[['Anno']] <- dataset[['Anno']] + lags
@@ -43,7 +45,7 @@ fdiff <- function(dataset,VAR,var.agg){
 #' \donttest{
 #' library(maxLik)
 #' library(matrixcalc)
-#' library(rgdal)
+#' 
 #' set.seed(123)
 #' sd = sim_data_fe(dataset=regsamp,N=100,TT=8,
 #'                  spatial = 80,Tau = -0.2,Rho = 0.4,
@@ -66,6 +68,7 @@ bcml <- function(
  estimation='analytical',
  corrBIAS=TRUE,
  WMAT = NULL){
+
 
  
  if(class(dataset) %in% c('sp','STFDF')){ 
@@ -351,7 +354,7 @@ bcml <- function(
 #' @return Returns a model of class "inla". Please, refer to the documentation of the INLA package for additional information
 #' @examples 
 #' \donttest{
-#' library(rgdal)
+#' 
 #' set.seed(123)
 #' sd = sim_data_fe(dataset=regsamp,N=100,TT=8,spatial = 80,
 #'                  Tau = -0.2,Rho = 0.4, Beta = 2,sdDev = 2,
@@ -710,7 +713,7 @@ effectsST <- function(dataset,
 #' @return The estimates tables
 #' @examples 
 #' \donttest{
-#' library(rgdal)
+#' 
 #' set.seed(123)
 #' sd = sim_data_fe(dataset=regsamp,N=50,TT=8,
 #'                 spatial = 80,Tau = -0.2,Rho = 0.4,
@@ -1365,7 +1368,7 @@ TT = TT+startingT
 prova = sp::spTransform(dataset[1:N,],
  sp::CRS("+proj=longlat +datum=WGS84"))
 
-if(class(dataset)=="SpatialPointsDataFrame"){ 
+if(is(dataset,"SpatialPointsDataFrame")){ 
  Coordinates = sp::coordinates(prova)
  spat = sp::SpatialPoints(Coordinates)
  sp::proj4string(spat) = sp::proj4string(prova)

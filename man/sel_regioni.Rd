@@ -8,7 +8,7 @@
 SpatialPolygons object
 }
 \source{
-\url{https://www.istat.it/it/archivio/222527}
+ISTAT
 }
 \usage{
 sel_regioni

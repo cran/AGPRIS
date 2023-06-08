@@ -45,7 +45,7 @@ This function estimates a space time linear model according to the specified for
 \donttest{
 library(maxLik)
 library(matrixcalc)
-library(rgdal)
+
 set.seed(123)
 sd = sim_data_fe(dataset=regsamp,N=100,TT=8,
                  spatial = 80,Tau = -0.2,Rho = 0.4,
